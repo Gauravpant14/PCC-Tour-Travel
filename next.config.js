@@ -1,8 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ['images.unsplash.com','static.toiimg.com'],
-      },
-}
+  baseUrl: ".",
+  paths: {
+    "@components/*": ["components/*"],
+    "@styles/*": ["styles/*"],
+    // "@images/*": ["public/images/*"],
+  },
+  images: {
+    domains: ["images.unsplash.com", "static.toiimg.com","images"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

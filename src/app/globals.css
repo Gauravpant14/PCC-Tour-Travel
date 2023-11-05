@@ -558,7 +558,7 @@ body { background: var(--white); }
 
 .card-meta-item { position: relative; }
 
-.card-meta-item:not(:last-child)::after {
+/* .card-meta-item:not(:last-child)::after {
   content: "";
   position: absolute;
   top: 4px;
@@ -566,7 +566,7 @@ body { background: var(--white); }
   bottom: 4px;
   width: 1px;
   background: hsla(0, 0%, 0%, 0.3);
-}
+} */
 
 .meta-box {
   display: flex;
