@@ -1,9 +1,11 @@
+"use client"
 import React from 'react'
 import logo from '../../../public/icons/logo-no-background.svg'
 import Image from 'next/image';
 import { BiPhoneCall } from 'react-icons/bi';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import {CiFacebook,CiInstagram,CiYoutube} from 'react-icons/ci';
+import { callHandler } from '@/utils/callHandler';
 const Header = () => {
     return <header className="header" data-header>
 
@@ -114,7 +116,7 @@ const Header = () => {
 
                 </nav>
 
-                <button className="btn btn-primary">Book Now</button>
+                <button className="btn btn-primary" onClick={callHandler}>Book Now</button>
 
             </div>
         </div>

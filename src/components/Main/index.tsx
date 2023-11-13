@@ -1,6 +1,7 @@
+"use client"
 import React from "react";
 import Image from "next/image";
-
+import {callHandler} from "../../utils/callHandler";
 import { CiStar } from "react-icons/ci";
 
 import popular from "../../../public/images/popular-1.jpg";
@@ -21,7 +22,7 @@ import { AiFillCar } from "react-icons/ai";
 
 const Main = () => {
     const stars = new Array(5).fill(0);
-
+    
     return (
         <main>
             <article>
@@ -36,7 +37,7 @@ const Main = () => {
                         <div className="btn-group">
                             <button className="btn btn-primary">Learn more</button>
 
-                            <button className="btn btn-secondary">Book now</button>
+                            <button className="btn btn-secondary" onClick={callHandler}>Book now</button>
                         </div>
                     </div>
                 </section>
@@ -148,16 +149,16 @@ const Main = () => {
                                                 <div className="card-rating">
                                                     {stars.map(() => (
                                                         <BiSolidStar />
-                                                    ))}
+                                                        ))}
                                                 </div>
                                             </div>
 
-                                            <p className="price">
+                                            {/* <p className="price">
                                                 $750
                                                 <span>/ per person</span>
-                                            </p>
-
-                                            <button className="btn btn-secondary">Book Now</button>
+                                            </p> */}
+                                            <p onClick={callHandler} className="text-1xl font-bold text-green-500 animate-bounce mb-5">Call now for more info</p>
+                                            <button className="btn btn-secondary" onClick={callHandler}>Book Now</button>
                                         </div>
                                     </div>
                                 </li>
@@ -228,7 +229,7 @@ const Main = () => {
                             </p>
                         </div>
 
-                        <button className="btn btn-secondary">Contact Us !</button>
+                        <button className="btn btn-secondary" onClick={callHandler}>Contact Us !</button>
                     </div>
                 </section>
             </article>
